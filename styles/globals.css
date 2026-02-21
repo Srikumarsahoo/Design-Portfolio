@@ -247,3 +247,8 @@ body {
 .dot-green { background: #22c55e; }
 .dot-pink { background: #ec4899; }
 .dot-teal { background: #14b8a6; }
+
+/* Case study nav */
+nav-glass {
+  position: sticky;
+}

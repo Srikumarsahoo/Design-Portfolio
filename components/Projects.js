@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { config } from '../config/portfolio'
+import Link from 'next/link'
 
 export default function Projects() {
   const sectionRef = useRef(null)
@@ -35,9 +36,9 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {config.projects.map((project, i) => (
-            <a
+            <Link
               key={project.id}
-              href={project.link}
+              href={`/projects/${project.id}`}
               className="animate-item anim-hidden project-card card group cursor-pointer"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
@@ -77,7 +78,7 @@ export default function Projects() {
                 <h3 className="text-[18px] font-bold text-[#0d0d0d] mb-1">{project.title}</h3>
                 <p className="text-[13px] text-[#666] leading-relaxed">{project.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
