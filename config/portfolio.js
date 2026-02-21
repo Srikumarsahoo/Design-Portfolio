@@ -13,7 +13,7 @@ export const config = {
 
   // ── Hero Avatar ────────────────────────────────────────────
   // Replace with your own image in /public/images/hero.png
-  heroImage: "/images/hero.png",
+  heroImage: "/images/Hero.jpg",
 
   // ── Social Links ───────────────────────────────────────────
   social: {
