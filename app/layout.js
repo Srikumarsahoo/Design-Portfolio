@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'Portfolio — UI/UX Designer',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="grain">
         {children}
+        <Analytics />
       </body>
     </html>
   )
