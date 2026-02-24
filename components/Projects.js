@@ -1,34 +1,36 @@
-'use client'
-import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { config } from '../config/portfolio'
-import Link from 'next/link'
+"use client";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { config } from "../config/portfolio";
+import Link from "next/link";
 
 export default function Projects() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add('anim-visible')
-            e.target.classList.remove('anim-hidden')
+            e.target.classList.add("anim-visible");
+            e.target.classList.remove("anim-hidden");
           }
         }),
-      { threshold: 0.05 }
-    )
+      { threshold: 0.05 },
+    );
     sectionRef.current
-      ?.querySelectorAll('.animate-item')
-      .forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+      ?.querySelectorAll(".animate-item")
+      .forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="work" className="py-20 bg-white/60" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="animate-item anim-hidden section-label block">Best Projects</span>
+          <span className="animate-item anim-hidden section-label block">
+            Best Projects
+          </span>
           <h2 className="animate-item anim-hidden text-[42px] lg:text-[52px] font-bold text-[#0d0d0d] tracking-tight">
             Selected Works
           </h2>
@@ -49,16 +51,18 @@ export default function Projects() {
                     src={project.coverImage}
                     alt={project.title}
                     fill
+                    loading="lazy" // ← Default but be explicit
+                    quality={80}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                    }}
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                     <div className="text-4xl">🖼️</div>
                     <p className="text-sm text-[#888]">Add project image</p>
-                    <p className="text-xs text-[#aaa]">/public/images/projects/project-{i + 1}.png</p>
+                    <p className="text-xs text-[#aaa]">
+                      /public/images/projects/project-{i + 1}.png
+                    </p>
                   </div>
                 )}
 
@@ -72,11 +76,17 @@ export default function Projects() {
               <div className="p-5">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tags.map((tag, j) => (
-                    <span key={j} className="tag">{tag}</span>
+                    <span key={j} className="tag">
+                      {tag}
+                    </span>
                   ))}
                 </div>
-                <h3 className="text-[18px] font-bold text-[#0d0d0d] mb-1">{project.title}</h3>
-                <p className="text-[13px] text-[#666] leading-relaxed">{project.description}</p>
+                <h3 className="text-[18px] font-bold text-[#0d0d0d] mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-[13px] text-[#666] leading-relaxed">
+                  {project.description}
+                </p>
               </div>
             </Link>
           ))}
@@ -84,11 +94,9 @@ export default function Projects() {
 
         {/* View All CTA */}
         <div className="text-center mt-10">
-          <button className="btn-lime">
-            View All Projects →
-          </button>
+          <button className="btn-lime">View All Projects →</button>
         </div>
       </div>
     </section>
-  )
+  );
 }
