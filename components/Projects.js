@@ -58,7 +58,7 @@ export default function Projects() {
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center gap-2">
-                    <div className="text-4xl">🖼️</div>
+                    <div className="text-4xl"></div>
                     <p className="text-sm text-[#888]">Add project image</p>
                     <p className="text-xs text-[#aaa]">
                       /public/images/projects/project-{i + 1}.png

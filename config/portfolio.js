@@ -106,10 +106,10 @@ export const config = {
   projects: [
     {
       id: 1,
-      title: "Finvera Dashboard",
-      category: "Fintech · Product Design",
-      tags: ["Fintech", "Product Design"],
-      coverImage: "/images/projects/project-1.png",
+      title: "Coino - Crypto Trading App",
+      category: "Fintech · Trading App",
+      tags: ["Fintech", "Stock Market","Trading"],
+      coverImage: "/images/projects/Cover Page.jpg",
       description: "A comprehensive financial analytics dashboard built for enterprise clients, featuring real-time data visualization.",
       link: "#",
 
@@ -117,8 +117,8 @@ export const config = {
       overview: {
         role: "Lead UI/UX Designer",
         timeline: "8 Weeks · Jan – Mar 2025",
-        tools: ["Figma", "FigJam", "Notion", "Zeplin"],
-        team: "Solo designer alongside 2 front-end developers & 1 PM",
+        tools: ["Figma", "FigJam", "Notion"],
+        team: "Solo designer",
       },
       problem: {
         challenge: "Enterprise finance teams were drowning in data. The existing dashboard was a cluttered spreadsheet-style layout that required hours of training and caused decision fatigue among senior analysts.",
@@ -133,7 +133,7 @@ export const config = {
         {
           title: "Research & Discovery",
           description: "Conducted 12 user interviews with finance analysts across 4 companies. Key finding: users spent 60% of their time just hunting for the right chart — not analyzing it. Competitor audit of 6 tools revealed a clear gap in contextual data storytelling.",
-          image: "/images/projects/project-1-process-1.png",
+          image: "/images/projects/Cover Page.jpg",
         },
         {
           title: "Ideation & Wireframing",
@@ -178,10 +178,10 @@ export const config = {
 
     {
       id: 2,
-      title: "Homerly Real Estate",
-      category: "Web App · UI/UX Design",
-      tags: ["Web App", "UI/UX Design"],
-      coverImage: "/images/projects/project-2.png",
+      title: "Dorroto - Get Everthing Packed",
+      category: "Andoid App · UI/UX Design",
+      tags: ["Android App", "UI/UX Design"],
+      coverImage: "/images/projects/CoverImage-2.png",
       description: "Modern real estate platform with property discovery, virtual tours, and seamless booking experience.",
       link: "#",
 
@@ -204,7 +204,7 @@ export const config = {
         {
           title: "Research & Discovery",
           description: "Surveyed 80 recent home buyers. Top frustration: 'I can never tell what the neighborhood actually feels like from photos.' This insight drove the decision to prioritize immersive visual experiences over data tables.",
-          image: "/images/projects/project-2-process-1.png",
+          image: "/images/projects/CoverImage-2.png",
         },
         {
           title: "Ideation & Wireframing",
