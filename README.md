@@ -112,7 +112,7 @@ git push -u origin main
 2. Click **"New Project"**
 3. Select your `portfolio` repository
 4. Click **"Deploy"** — Vercel auto-detects Next.js ✅
-5. Your site is live at `your-project.vercel.app` 🎉
+5. Your site is live at `https://srikumar-sahoo.vercel.app/` 🎉
 
 **Step 3: Custom Domain (Optional)**
 1. In Vercel dashboard → Project Settings → Domains
