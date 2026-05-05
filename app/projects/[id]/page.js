@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,8 +16,17 @@ import {
 export default function ProjectDetail() {
   const { id } = useParams()
   const router = useRouter()
-  const project = config.projects.find((p) => p.id === parseInt(id))
   const sectionRef = useRef(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const numericId = Number(id)
+  const project = mounted && Number.isFinite(numericId)
+    ? config.projects.find((p) => p.id === numericId)
+    : null
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -35,6 +44,10 @@ export default function ProjectDetail() {
     return () => observer.disconnect()
   }, [])
 
+  if (!mounted) {
+    return <main className="min-h-screen bg-[#f5f5f0]" />
+  }
+
   if (!project || !project.overview) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4">
@@ -44,7 +57,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const currentIndex = config.projects.findIndex((p) => p.id === parseInt(id))
+  const currentIndex = config.projects.findIndex((p) => p.id === numericId)
   const nextProject = config.projects[(currentIndex + 1) % config.projects.length]
 
   return (
