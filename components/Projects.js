@@ -51,7 +51,7 @@ export default function Projects() {
                     src={project.coverImage}
                     alt={project.title}
                     fill
-                    loading="lazy" // ← Default but be explicit
+                    loading="lazy"
                     quality={80}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -68,7 +68,7 @@ export default function Projects() {
 
                 {/* Hover overlay */}
                 <div className="overlay absolute inset-0 bg-[#0d0d0d]/60 flex items-center justify-center">
-                  <span className="btn-lime text-sm">View Project →</span>
+                  <span className="btn-lime text-sm">View Project</span>
                 </div>
               </div>
 
@@ -92,10 +92,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* View All CTA */}
-        <div className="text-center mt-10">
-          <button className="btn-lime">View All Projects →</button>
-        </div>
       </div>
     </section>
   );

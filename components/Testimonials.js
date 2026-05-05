@@ -28,13 +28,14 @@ export default function Testimonials() {
       id="testimonials"
       className="py-20 max-w-6xl mx-auto px-6"
       ref={sectionRef}
+      suppressHydrationWarning
     >
       <div className="text-center mb-12">
         <span className="animate-item anim-hidden section-label block">
-          What Clients Say
+          What Founders Say
         </span>
         <h2 className="animate-item anim-hidden text-[42px] font-bold text-[#0d0d0d] tracking-tight">
-          Kind words from clients
+          Kind words from founders
         </h2>
       </div>
 
@@ -55,8 +56,8 @@ export default function Testimonials() {
             </p>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-[#b5f23d] to-[#22c55e] flex-shrink-0">
-                {t.avatar && (
+              {t.avatar && (
+                <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-[#b5f23d] to-[#22c55e] flex-shrink-0">
                   <Image
                     src={t.avatar}
                     alt={t.name}
@@ -65,8 +66,8 @@ export default function Testimonials() {
                     quality={75}
                     className="object-cover w-full h-full"
                   />
-                )}
-              </div>
+                </div>
+              )}
               <div>
                 <p className="text-[14px] font-semibold text-[#0d0d0d]">
                   {t.name}

@@ -34,7 +34,7 @@ export default function Process() {
 
         {/* Process steps */}
         <div className="relative">
-          {/* Connecting line — desktop */}
+          {/* Connecting line - desktop */}
           <div className="hidden lg:block absolute top-10 left-[16.66%] right-[16.66%] h-[2px] bg-gradient-to-r from-[#b5f23d] via-[#b5f23d] to-[#b5f23d]">
             <div className="absolute top-1/2 left-[33%] w-3 h-3 bg-[#b5f23d] rounded-full -translate-y-1/2 -translate-x-1/2" />
             <div className="absolute top-1/2 right-[33%] w-3 h-3 bg-[#b5f23d] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -54,7 +54,7 @@ export default function Process() {
                   </span>
                   {i === 1 && (
                     <div className="w-8 h-8 bg-[#b5f23d] rounded-full flex items-center justify-center text-[14px]">
-                      ✦
+                      *
                     </div>
                   )}
                 </div>

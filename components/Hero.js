@@ -76,13 +76,13 @@ export default function Hero() {
             style={{ transitionDelay: "0.5s" }}
           >
             <a href={`mailto:${config.email}`} className="btn-dark text-[15px]">
-              → Get In Touch
+              Get In Touch
             </a>
             <a
               href="#work"
               className="text-[14px] text-[#555] hover:text-[#0d0d0d] transition-colors font-medium"
             >
-              View Work ↓
+              View Work
             </a>
           </div>
 
@@ -126,16 +126,16 @@ export default function Hero() {
                   src={config.heroImage}
                   alt={config.name}
                   fill
-                  priority // ← Preloads immediately, critical for LCP
-                  fetchPriority="high" // ← Tells browser this is most important
-                  quality={85} // ← 85 is sweet spot: looks great, much smaller
-                  sizes="(max-width: 768px) 320px, 400px" // ← Prevents downloading huge image on mobile
+                  priority
+                  fetchPriority="high"
+                  quality={85}
+                  sizes="(max-width: 768px) 320px, 400px"
                   className="object-cover object-top"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-6xl mb-3">👤</div>
+                    <div className="text-6xl mb-3">Add</div>
                     <p className="text-sm text-[#555]">Add your photo</p>
                     <p className="text-xs text-[#888]">
                       /public/images/Hero.jpg
@@ -148,7 +148,7 @@ export default function Hero() {
             {/* Floating card */}
             <div className="absolute -left-10 top-1/3 bg-white rounded-2xl shadow-xl border border-[#f0f0ea] px-4 py-3 text-sm font-medium hidden lg:block">
               <div className="flex items-center gap-2">
-                <span className="text-xl">✦</span>
+                <span className="text-xl">*</span>
                 <div>
                   <p className="text-[11px] text-[#888] font-normal">
                     Currently
@@ -161,7 +161,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right side description — desktop */}
+      {/* Right side description - desktop */}
       <div className="hidden lg:block absolute right-6 top-1/2 -translate-y-1/2 max-w-[200px] text-right">
         <p className="text-[13px] text-[#555] leading-relaxed">
           passionate about creating intuitive digital experiences that connect
